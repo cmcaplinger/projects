@@ -3,17 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=<1.0>">
-    <title>Document</title>
+    <title>Too Hype To Handle</title>
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="app.js"></script>
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
     <div class = "main">
-        <h1 class="title">Too Hype To Handle</h1>
-        <h2 class="title">A Bipolar Two Survival Game</h2>
+        <h1 class = "title">Too Hype To Handle</h1>
+        <h2 class = "title">A Bipolar Two Survival Game</h2>
         <div class = "menu">
-            <button class = "start">Start</button>&nbsp;&nbsp;&nbsp;
-            <button class = "rules">Rules</button>&nbsp;&nbsp;&nbsp; 
+            <button class = "startbtn" id = "mainbtn">Start</button>&nbsp;&nbsp;&nbsp;
+            <button class = "rulesbtn">Rules</button>&nbsp;&nbsp;&nbsp;
+            <div class="rules">
+                <h3 class = "rulesTextTitle">TOO HYPE TO HANDLE, A BIPOLAR TWO SURVIVAL GAME</h3>
+                <p class = "rulesTextBody">is a simulation based on what it's like to live with Bipolar Two. Players can perform various actions - sleep, eat, indulge, exercise, work, reflect - in response to different scenarios.</p> 
+                <p class = "rulesTextBody">The effects of the player's choice is reflected in the mood status bar. Actions will preserve the player's mental health status as baseline - or push the player into either a depressive or hypomanic mood. Depending on what state the player is in, their action choices may be limited.</p> 
+                <p class = "rulesTextBody">The goal of this application is to gamify the process of healthy living and mood disorder management. </p>
+                <button class = "startbtn">Start</button>&nbsp;&nbsp;&nbsp;
+            </div> 
         </div>
+        <div class = "game">
+            <div class = "moodTracker">
+                <h3 class ="status" id = "mood">Mood</h3>
+                <div class="moodFrame">
+                    <div class="moodBar">
+
+                    </div>
+                </div>
+            </div>
+            <div class = "controls">
+                <img class = "status-icon" id = "sleep" src="\Sleep-Icon-2H2H.png" alt="Sleep">
+                <img class = "status-icon" id = "food" src="\Food-Icon-2H2H.png" alt="Food">
+                <img class = "status-icon" id = "addiction" src="\Addictions-Icon-2H2H.png" alt="Addiction">
+                <img class = "status-icon" id = "work" src="\Work-Icon-2H2H.png" alt="Work">
+            </div>
+            
+
+            
+        </div> 
 
     </div>
    

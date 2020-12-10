@@ -1,7 +1,8 @@
+/*START SCREEN*/
 .main {
     height: 100vh;
     width: 100%;
-    background-image: linear-gradient(to left top, rgba(27, 153, 139, 1), rgb(255, 253, 130, 1));
+    background-image: linear-gradient(to left top, rgba(27, 153, 139, 1), rgba(255, 253, 130, 1));
     background-size: cover;
     background-position: top;
     position: relative;
@@ -32,7 +33,7 @@ h2 {
     align-items: center;
     justify-content: space-evenly;
 }
-.start, .rules {
+.startbtn, .rulesbtn {
     padding: 10px 40px;
     color: white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -43,9 +44,63 @@ h2 {
     border: 4px solid white;
 }
 
-.start:hover, .rules:hover {
+.startbtn:hover, .rulesbtn:hover {
     background-color: white;
     color: rgba(27, 153, 139, 1)
 }
+
+/*RULES*/
+.rules {
+    display: none;
+    padding: 10vh;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: left;
+    font-size: 30px;
+}
+
+
+/*GAME STATUS*/
+
+.game {
+    display: none;
+}
+#mood {
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 4vh;
+    text-align: center; 
+}
+
+#sleep, #food, #addiction, #work {
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2vh;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    align-content: flex-end;
+}
+
+#sleep {
+    height: 142px;
+    padding: 25px;
+}
+
+#food {
+    height: 125px;
+    padding: 25px;
+}
+#addiction {
+    height: 150px;
+    padding: 25px;
+}
+
+#work {
+    height: 125px;
+    padding: 25px;
+}
+
+
 
 /* ANIMATIONS */
