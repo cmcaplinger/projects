@@ -21,17 +21,25 @@
             <div class="rules">
                 <h3 class = "rulesTextTitle">TOO HYPE TO HANDLE, A BIPOLAR TWO SURVIVAL GAME</h3>
                 <p class = "rulesTextBody">is a simulation based on what it's like to live with Bipolar Two. Players can perform various actions - sleep, eat, indulge, exercise, work, reflect - in response to different scenarios.</p> 
-                <p class = "rulesTextBody">The effects of the player's choice is reflected in the mood status bar. Actions will preserve the player's mental health status as baseline - or push the player into either a depressive or hypomanic mood. Depending on what state the player is in, their action choices may be limited.</p> 
-                <p class = "rulesTextBody">The goal of this application is to gamify the process of healthy living and mood disorder management. </p>
+                <p class = "rulesTextBody" id = "def">Bipolar Two is a mood disorder characterized by periods of depression and hypomania. Depressive symptoms may include loss of interest, weight changes, fatigue, feelings of guilt, decreased ability to think, sleeping too much, and suicidal ideation and actions. Hypomanic symptoms may include increased energy, insomnia, risky behavior like hypersexuality and addictions, exaggerated self-confidence, and racing thoughts. After periods of hypomania, people often experience an intense emotional crash. </p>
+                <p class = "rulesTextBody">Effects of the player's choice are reflected in the mood status bar. Actions will preserve the player's mental health status as baseline - or push the player into either a depressive or hypomanic mood. Depending on what mood the player is in, their action choices may be limited.</p> 
+                <p class = "rulesTextBody">Goal one of this application is to gamify the process of healthy living and mood disorder management. The second is to foster empathy and provide perspective for people without a mood disorder. </p>
                 <button class = "startbtn">Start</button>&nbsp;&nbsp;&nbsp;
             </div> 
         </div>
         <div class = "game">
             <div class = "moodTracker">
-                <h3 class ="status" id = "mood">Mood</h3>
+                <h3 class ="status" id = "mood">Mood Status</h3>
+                <div class="status" id = "moodType">
+                    <p class ="status" id="depression">Depression</p>
+                    <p class ="status" id="hypomania">Hypomania</p>
+                </div>
                 <div class="moodFrame">
                     <div class="moodBar">
-
+                        <div class ="moodRevealDepression"></div>
+                    </div>
+                    <div class="moodBar">
+                        <div class ="moodRevealHypomania"></div>
                     </div>
                 </div>
             </div>
@@ -40,6 +48,18 @@
                 <img class = "status-icon" id = "food" src="\Food-Icon-2H2H.png" alt="Food">
                 <img class = "status-icon" id = "addiction" src="\Addictions-Icon-2H2H.png" alt="Addiction">
                 <img class = "status-icon" id = "work" src="\Work-Icon-2H2H.png" alt="Work">
+            </div>
+            <div class = "promptField">
+                <div class = "avatar">
+                    <img id = "avatar-icon" src="\Avatar-Icon-2H2H.png" alt="Avatar">
+                </div>
+                <div class = "scenario">
+                    <p id = "scenario1"></p>
+
+                </div>
+                <div id = "choices">
+
+                </div>
             </div>
             
 

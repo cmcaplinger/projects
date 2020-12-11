@@ -1,3 +1,7 @@
+body {
+    overflow-y: hidden;
+}
+
 /*START SCREEN*/
 .main {
     height: 100vh;
@@ -10,6 +14,9 @@
     flex-direction: column;
     align-content: center;
     overflow: auto;
+    animation-name: background-gradient;
+    animation-duration: 4s;
+    overflow-y: hidden;
 }
 
 h1 {
@@ -56,7 +63,11 @@ h2 {
     color: white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: left;
-    font-size: 30px;
+    font-size: 25px;
+}
+
+.rulesTextTitle {
+    font-size: 40px;
 }
 
 
@@ -65,11 +76,61 @@ h2 {
 .game {
     display: none;
 }
-#mood {
+.moodTracker {
+    position: relative;
+    top: -25vh;
+}
+.status {
     color: white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 4vh;
-    text-align: center; 
+    font-size: 5vh;
+    text-align: center;
+}
+
+#depression, #hypomania {
+    font-size: 3vh;
+    margin: auto;
+    padding-right: 200px;
+    padding-left: 200px;
+    text-align: center;
+    display: inline-block;
+    white-space: nowrap;
+
+}
+.moodFrame{
+    width: 75vw;
+    height: 20px;
+    display: flex;
+    margin: auto;
+  }
+  .moodBar{
+    height: 100%;
+    flex: 1;
+    background-color:linear-gradient(to left top, rgba(27, 153, 139, 1), rgba(255, 253, 130, 1));
+    border: solid 10px white;
+    border-radius: 15px;
+    margin: 5px;
+  }
+  .moodRevealDepression{
+    flex: 1;
+    background: white; 
+    height: 100%;
+    width: 0%;
+    float: right;
+  }
+  .moodRevealHypomania{
+    background: white; 
+    height: 100%;
+    width: 0%;
+  }
+
+.promptField {
+    float: left;
+    margin: auto;
+    padding: 200px;
+}
+#avatar-icon {
+    height: 250px;
 }
 
 #sleep, #food, #addiction, #work {
@@ -77,9 +138,10 @@ h2 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 2vh;
     text-align: left;
-    display: flex;
+    display: inline-block;
     flex-direction: row;
     align-content: flex-end;
+    margin: auto;
 }
 
 #sleep {
@@ -104,3 +166,4 @@ h2 {
 
 
 /* ANIMATIONS */
+

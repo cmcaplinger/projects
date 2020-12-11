@@ -22,6 +22,8 @@ $(()=>{
         $('.game').fadeIn(2000);
         $('.main').fadeTo("slower", 1);
         $('.rules').hide();
+        $('.status-icon').hide();
+
     })
     $('.rulesbtn').click(function(){
         $('.title').remove();
