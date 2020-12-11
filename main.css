@@ -1,11 +1,15 @@
 body {
     overflow-y: hidden;
+    overflow-x: hidden;
+    background-image: linear-gradient(to left top, rgba(27, 153, 139, 1), rgba(255, 253, 130, 1));
+
 }
 
 /*START SCREEN*/
+
 .main {
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     background-image: linear-gradient(to left top, rgba(27, 153, 139, 1), rgba(255, 253, 130, 1));
     background-size: cover;
     background-position: top;
@@ -13,12 +17,7 @@ body {
     display: flex;
     flex-direction: column;
     align-content: center;
-    overflow: auto;
-    animation-name: background-gradient;
-    animation-duration: 4s;
-    overflow-y: hidden;
 }
-
 h1 {
     margin: auto;
     color: white;
@@ -26,21 +25,19 @@ h1 {
     font-size: 20vh;
     text-align: center;
 }
-
 h2 {
     color: white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 5vh;
     text-align: center;
 }
-
 .menu {
     margin: auto;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
 }
-.startbtn, .rulesbtn {
+.startbtn, .rulesbtn, .advancebtn {
     padding: 10px 40px;
     color: white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -50,26 +47,25 @@ h2 {
     background-color: transparent;
     border: 4px solid white;
 }
-
-.startbtn:hover, .rulesbtn:hover {
+.startbtn:hover, .rulesbtn:hover, .advancebtn:hover {
     background-color: white;
     color: rgba(27, 153, 139, 1)
 }
 
 /*RULES*/
+
 .rules {
     display: none;
-    padding: 10vh;
+    padding-left: 30vw;
+    padding-right: 30vw;
     color: white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: left;
     font-size: 25px;
 }
-
 .rulesTextTitle {
     font-size: 40px;
 }
-
 
 /*GAME STATUS*/
 
@@ -78,7 +74,7 @@ h2 {
 }
 .moodTracker {
     position: relative;
-    top: -25vh;
+    top: -15vh;
 }
 .status {
     color: white;
@@ -86,7 +82,6 @@ h2 {
     font-size: 5vh;
     text-align: center;
 }
-
 #depression, #hypomania {
     font-size: 3vh;
     margin: auto;
@@ -102,37 +97,53 @@ h2 {
     height: 20px;
     display: flex;
     margin: auto;
-  }
-  .moodBar{
+}
+.moodBar{
     height: 100%;
     flex: 1;
     background-color:linear-gradient(to left top, rgba(27, 153, 139, 1), rgba(255, 253, 130, 1));
     border: solid 10px white;
     border-radius: 15px;
     margin: 5px;
-  }
-  .moodRevealDepression{
+}
+.moodRevealDepression{
     flex: 1;
     background: white; 
     height: 100%;
     width: 0%;
     float: right;
-  }
-  .moodRevealHypomania{
+}
+.moodRevealHypomania{
     background: white; 
     height: 100%;
     width: 0%;
-  }
-
+}
 .promptField {
+    display: inline-block;
     float: left;
-    margin: auto;
     padding: 200px;
 }
 #avatar-icon {
     height: 250px;
 }
-
+.scenario {
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2vh;
+    text-align: left;
+    padding-left: 300px;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: animated-text 3s steps(30,end) 2s 1 normal both;
+    margin: auto;
+}
+@keyframes animated-text{
+    from{width: 0;}
+    to{width: 90%;}
+}
+.advancebtn {
+    float: right;
+}
 #sleep, #food, #addiction, #work {
     color: white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -165,5 +176,4 @@ h2 {
 
 
 
-/* ANIMATIONS */
-
+/* ANIMATIONS */  
