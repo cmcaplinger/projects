@@ -73,6 +73,15 @@ $(()=>{
             $('#workbtn').show();
             $('#workimg').show();
         }
+        if ($('.moodRevealDepression').css('width') >= '75%'){
+            $('#foodbtn').hide();
+            $('#foodimg').hide();
+            $('#therapybtn').hide(); 
+        } else {
+            $('#foodbtn').show();
+            $('#foodimg').show();
+            $('#therapybtn').show(); 
+        }
         if ($('.moodRevealHypomania').css('width') >= '50%'){
             $('#sleepbtn').hide();
             $('#sleepimg').hide();
