@@ -1,5 +1,5 @@
 
-# Too Hype To Handle, A Bipolar Two Survival Game: 
+# Too Hype To Handle, A Bipolar Two Survival Game 
 
 ### App Demo: https://cmcaplinger.github.io/projects/
 

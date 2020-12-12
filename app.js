@@ -43,44 +43,58 @@ $(()=>{
     })    
     $('#exercisebtn').click(function(){
         $('.moodRevealDepression').css('width', '-=25%');
-        $('.moodRevealHypomania').css('width', '-=25%');
     })
     $('#therapybtn').click(function(){
         $('.moodRevealDepression').css('width', '0%');
         $('.moodRevealHypomania').css('width', '0%');
         $('.status-icon').show();
+        $('.img').show();
     })
     $('#weedbtn').click(function(){
         $('.moodRevealDepression').css('width', '0%');
         $('.moodRevealHypomania').css('width', '+=25%');
+        $('.status-icon').show();
+        $('.img').show();
     })
     $('.status-icon').click(function(){
         if  ($('.moodRevealDepression').css('width') >= '50%') {
             $('#weedbtn').show();
+            $('#foodbtn').hide();
+            $('#foodimg').hide();
+            $('#exercisebtn').hide();
+            $('#exerciseimg').hide();
+            $('#workbtn').hide();
+            $('#workimg').hide();
+
         } else {
             $('#weedbtn').hide();
+            $('#foodbtn').show();
+            $('#foodimg').show();
+            $('#exercisebtn').show();
+            $('#exerciseimg').show();
+            $('#workbtn').show();
+            $('#workimg').show();
         }
         if ($('.moodRevealHypomania').css('width') >= '50%'){
             $('#sleepbtn').hide();
+            $('#sleepimg').hide();
             $('#foodbtn').hide();
+            $('#foodimg').hide();
             $('#weedbtn').hide();
             
         }
         if ($('.moodRevealHypomania').css('width') >= '75%') {
             $('#addictionbtn').hide();
+            $('#addictionimg').hide();
         }
         if ($('.moodRevealHypomania').css('width') >= '50%') {
             $('#workbtn').hide();
+            $('#workimg').hide();
         }
         if ($('.moodRevealHypomania').css('width') == '100%') {
             $('#exercisebtn').hide();
+            $('#exerciseimg').hide();
             $('.moodRevealDepression').css('width','+=25%');
         }
     })
-
-    // if player doesn't #sleepbtn || #foodbtn after looping through 5x, hypomania +=25%
-// if moodRevealHypomania = 100%, set width to 0% and set moodRevealDepression = 50%
-
-
-
 })

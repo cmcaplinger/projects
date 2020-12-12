@@ -97,7 +97,6 @@ h2 {
     text-align: center;
     display: inline-block;
     white-space: nowrap;
-
 }
 .moodFrame{
     width: 75vw;
@@ -125,10 +124,32 @@ h2 {
     height: 100%;
     width: 0%;
 }
+
+#sleepimg {
+    height: 160px;
+    padding-left: 0px;
+    padding-right: 25px;
+    padding-bottom: 50px;
+}
+#foodimg {
+    height: 142px;
+    padding: 50px;
+}
+#addictionimg {
+    height: 160px;
+    padding: 50px;
+}
+#workimg {
+    height: 142px;
+    padding: 50px;
+}
+#exerciseimg {
+    height: 142px;
+    padding: 50px;
+}
 #sleepbtn, #foodbtn, #addictionbtn, #workbtn, #exercisebtn, #therapybtn, #weedbtn {
     margin-right: 25px;
     font-size: medium;
-    float: left;
 }
 .promptField {
     display: inline-block;
@@ -147,7 +168,3 @@ h2 {
 .advancebtn {
 float: left;
 }
-
-
-/* ANIMATIONS */ 
-
