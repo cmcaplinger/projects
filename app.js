@@ -59,8 +59,6 @@ $(()=>{
     $('.status-icon').click(function(){
         if  ($('.moodRevealDepression').css('width') >= '50%') {
             $('#weedbtn').show();
-            $('#foodbtn').hide();
-            $('#foodimg').hide();
             $('#exercisebtn').hide();
             $('#exerciseimg').hide();
             $('#workbtn').hide();
@@ -80,8 +78,7 @@ $(()=>{
             $('#sleepimg').hide();
             $('#foodbtn').hide();
             $('#foodimg').hide();
-            $('#weedbtn').hide();
-            
+            $('#weedbtn').hide();   
         }
         if ($('.moodRevealHypomania').css('width') >= '75%') {
             $('#addictionbtn').hide();
@@ -91,10 +88,6 @@ $(()=>{
             $('#workbtn').hide();
             $('#workimg').hide();
         }
-        if ($('.moodRevealHypomania').css('width') == '100%') {
-            $('#exercisebtn').hide();
-            $('#exerciseimg').hide();
-            $('.moodRevealDepression').css('width','+=25%');
-        }
+
     })
 })
