@@ -27,6 +27,7 @@ $(()=>{
     
     $('#sleepbtn').click(function(){
         $('.moodRevealDepression').css('width', '-=25%');
+        $('.moodRevealHypomania').css('width', '-=25%');
     })
     $('#foodbtn').click(function(){
         $('.moodRevealDepression').css('width', '+=25%');
@@ -42,19 +43,41 @@ $(()=>{
     })    
     $('#exercisebtn').click(function(){
         $('.moodRevealDepression').css('width', '-=25%');
+        $('.moodRevealHypomania').css('width', '-=25%');
     })
     $('#therapybtn').click(function(){
         $('.moodRevealDepression').css('width', '0%');
         $('.moodRevealHypomania').css('width', '0%');
+        $('.status-icon').show();
     })
     $('#weedbtn').click(function(){
         $('.moodRevealDepression').css('width', '0%');
         $('.moodRevealHypomania').css('width', '+=25%');
     })
+    $('.status-icon').click(function(){
+        if  ($('.moodRevealDepression').css('width') >= '50%') {
+            $('#weedbtn').show();
+        } else {
+            $('#weedbtn').hide();
+        }
+        if ($('.moodRevealHypomania').css('width') >= '50%'){
+            $('#sleepbtn').hide();
+            $('#foodbtn').hide();
+            $('#weedbtn').hide();
+            
+        }
+        if ($('.moodRevealHypomania').css('width') >= '75%') {
+            $('#addictionbtn').hide();
+        }
+        if ($('.moodRevealHypomania').css('width') >= '50%') {
+            $('#workbtn').hide();
+        }
+        if ($('.moodRevealHypomania').css('width') == '100%') {
+            $('#exercisebtn').hide();
+            $('.moodRevealDepression').css('width','+=25%');
+        }
+    })
 
-    if  (   $('.moodRevealDepression').css('width') == '0%') {
-        $('weedbtn').after('#therapybtn');
-    } 
     // if player doesn't #sleepbtn || #foodbtn after looping through 5x, hypomania +=25%
 // if moodRevealHypomania = 100%, set width to 0% and set moodRevealDepression = 50%
 
